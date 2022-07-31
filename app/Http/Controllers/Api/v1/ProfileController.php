@@ -34,7 +34,7 @@ class ProfileController extends Controller
             });
             $image->save($path);
 
-            Storage::put('profile/' . $type . '/' . $user->id . '.jpg', file_get_contents($path));
+            Storage::put('profile/' . $type . '/' . $user->id . '.jpg' , file_get_contents($path));
             Storage::disk('local')->delete('tmp/' . $user->id . '-' . $type . '.' . $file->extension());
 
             $user->{$type} = 1;

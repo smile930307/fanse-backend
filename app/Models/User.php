@@ -216,7 +216,7 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return $value ? Storage::url('profile/avatar/' . $this->id . '.jpg') : null;
+        return $value ? Storage::url('profile/avatar/' . $this->id . '.jpg' . '?' .rand(5, 15000)) : null;
     }
 
     public function getCoverAttribute($value)

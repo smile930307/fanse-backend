@@ -174,7 +174,7 @@ class PaymentManager extends Manager
                 break;
             case Payment::TYPE_TIP:
                 $message = $payment->user->messages()->create([
-                    'message' => $payment->info['message'] ? $payment->info['message'] : "",
+                    'message' => $payment->info['message'],
                     'type' => Message::TYPE_TIP,
                     'info' => ['payment_id' => $payment->id]
                 ]);
