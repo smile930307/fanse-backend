@@ -60,7 +60,7 @@ class ListController extends Controller
         // following
         $lists[] = [
             'id' => CustomList::DEFAULT_FOLLOWING,
-            'listees_count' => $user->following()->count()
+            'listees_count' => $user->subscriptions()->count()
         ];
 
         // custom
